@@ -1,0 +1,47 @@
+﻿@model TConsultigSA.Models.HorasTrabajo
+
+<div class="container">
+    <h2 class="text-center mt-5 mb-5">Editar Horas Trabajadas Mensuales</h2>
+
+    <form asp-action="Edit" method="post">
+        <input asp-for="Id" type="hidden" />
+        <input asp-for="IdEmpleado" type="hidden" /> <!-- Campo oculto para IdEmpleado -->
+
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label>Empleado</label>
+                    <input type="text" class="form-control" value="@ViewBag.EmpleadoNombre" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Fecha">Mes y Año</label>
+                    <input asp-for="Fecha" class="form-control" type="date" min="1753-01-01" max="9999-12-31" />
+                    <span asp-validation-for="Fecha" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TotalHoras">Horas Trabajadas</label>
+                    <input asp-for="TotalHoras" class="form-control" />
+                    <span asp-validation-for="TotalHoras" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Observaciones">Observaciones</label>
+                    <textarea asp-for="Observaciones" class="form-control"></textarea>
+                    <span asp-validation-for="Observaciones" class="text-danger"></span>
+                </div>
+
+                <div class="form-group form-check">
+                    <input asp-for="Aprobado" class="form-check-input" />
+                    <label asp-for="Aprobado" class="form-check-label">Aprobado</label>
+                </div>
+
+                <div class="text-left mt-4">
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

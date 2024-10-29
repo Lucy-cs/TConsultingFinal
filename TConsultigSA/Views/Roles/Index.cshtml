@@ -1,0 +1,55 @@
+﻿@model IEnumerable<TConsultigSA.Models.Rol>
+
+
+        <div class="container">
+            <!-- Título centrado y con estilo -->
+            <h2 class="text-md-center mt-5 mb-2">Lista de Roles</h2>
+
+        <!-- Mensaje de error con botón de cierre -->
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["ErrorMessage"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+        }
+
+
+            <!-- Tabla de Roles -->
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-8">
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Descripción</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var rol in Model)
+                            {
+                                <tr>
+                                    <td>@rol.Descripcion</td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@rol.Id" class="btn btn-warning">Editar</a>
+                                        <form asp-action="Delete" asp-route-id="@rol.Id" method="post" style="display:inline;" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este rol?');">
+                                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-12 text-left">
+                            <a asp-action="Create" class="btn btn-success mt-3">Crear Nuevo Rol</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+

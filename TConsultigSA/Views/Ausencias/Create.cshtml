@@ -1,0 +1,52 @@
+﻿@model TConsultigSA.Models.Ausencia
+
+
+
+    
+        <div class="container">
+            <h2 class="text-md-center mt-5">Registrar Nueva Ausencia</h2>
+
+            <form asp-action="Create" method="post">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 mx-auto">
+                        <div class="form-group">
+                            <label for="IdEmpleado">Empleado</label>
+                            <select asp-for="IdEmpleado" class="form-control" asp-items="@(new SelectList(ViewBag.Empleados, "Id", "Nombre"))"></select>
+                            <span asp-validation-for="IdEmpleado" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="FechaInicio" class="control-label"></label>
+                            <input asp-for="FechaInicio" class="form-control" type="date" />
+                            <span asp-validation-for="FechaInicio" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="FechaFin" class="control-label"></label>
+                            <input asp-for="FechaFin" class="form-control" type="date" />
+                            <span asp-validation-for="FechaFin" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group form-check">
+                            <input asp-for="Autorizado" type="checkbox" class="form-check-input" id="Autorizado" />
+                            <label asp-for="Autorizado" class="form-check-label">Autorizado</label>
+                            <span asp-validation-for="Autorizado" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group form-check">
+                            <input asp-for="Deducible" type="checkbox" class="form-check-input" id="Deducible" />
+                            <label asp-for="Deducible" class="form-check-label">Deducible</label>
+                            <span asp-validation-for="Deducible" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+                    <a asp-action="Index" class="btn btn-secondary btn-lg">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    

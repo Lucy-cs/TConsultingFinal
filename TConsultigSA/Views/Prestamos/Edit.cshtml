@@ -1,0 +1,61 @@
+﻿@model TConsultigSA.Models.Prestamo
+
+        <div class="container">
+            <!-- Título centrado y con estilo -->
+            <h2 class="text-md-center mt-5 mb-5">Editar Préstamo</h2>
+
+            <!-- Formulario de edición de préstamo -->
+            <form asp-action="Edit" method="post" class="mt-4">
+                <input asp-for="Id" type="hidden" /> <!-- Campo oculto para Id -->
+
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="IdEmpleado">Empleado</label>
+                            <select asp-for="IdEmpleado" class="form-control" asp-items="@(new SelectList(ViewBag.Empleados, "Id", "Nombre"))"></select>
+                            <span asp-validation-for="IdEmpleado" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Total">Total del Préstamo</label>
+                            <input asp-for="Total" class="form-control" />
+                            <span asp-validation-for="Total" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="CuotasPendientes">Cuotas Pendientes</label>
+                            <input asp-for="CuotasPendientes" class="form-control" />
+                            <span asp-validation-for="CuotasPendientes" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="FechaPrestamo">Fecha de Préstamo</label>
+                            <input asp-for="FechaPrestamo" class="form-control" type="date" />
+                            <span asp-validation-for="FechaPrestamo" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="IdTipo">Tipo de Préstamo</label>
+                            <select asp-for="IdTipo" class="form-control" asp-items="@(new SelectList(ViewBag.TiposPrestamo, "Id", "Descripcion"))"></select>
+                            <span asp-validation-for="IdTipo" class="text-danger"></span>
+                        </div>
+
+                        <!-- Botones alineados a la izquierda -->
+                        <div class="row">
+                            <div class="col-12 text-left">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

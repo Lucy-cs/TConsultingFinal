@@ -1,0 +1,55 @@
+﻿@model IEnumerable<TConsultigSA.Models.Puesto>
+
+<div class="container">
+    <h2 class="text-md-center mt-5">Lista de Puestos</h2>
+
+    <!-- Mensaje de error con botón de cierre -->
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+        </div>
+    }
+
+    <div class="row mt-4 justify-content-center">
+        <div class="col-md-8">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var puesto in Model)
+                    {
+                        <tr>
+                            <td>@puesto.Descripcion</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@puesto.Id" class="btn btn-warning">Editar</a>
+                                <!-- Cambiado a asp-action="Delete" para usar el ActionName en el controlador -->
+                                <form asp-action="Delete" asp-route-id="@puesto.Id" method="post" style="display:inline;" onsubmit="return confirm('¿Estás seguro de eliminar este tipo de préstamo?');">
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fas fa-trash-alt"></i> Eliminar
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div class="row">
+                <div class="col-12 text-left">
+                    <a asp-action="Create" class="btn btn-success mt-3">Nuevo Puesto</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

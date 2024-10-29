@@ -1,0 +1,54 @@
+﻿@model IEnumerable<TConsultigSA.Models.Empresa>
+
+<div class="container">
+    <h2 class="text-center mt-5 mb-5">Empresas</h2>
+
+
+    <!-- Mensaje de error con botón de cierre -->
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+        </div>
+    }
+
+    
+    <div class="row mt-4 justify-content-center">
+        <div class="col-md-10">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var empresa in Model)
+                    {
+                        <tr>
+                            <td>@empresa.Nombre</td>
+                            <td>@empresa.Direccion</td>
+                            <td>@empresa.Telefono</td>
+                            <td>@empresa.Email</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@empresa.Id" class="btn btn-warning">Editar</a>
+                                <form asp-action="Delete" asp-route-id="@empresa.Id" method="post" style="display:inline;" onsubmit="return confirm('¿Estás seguro de eliminar esta empresa?');">
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <a asp-action="Create" class="btn btn-success mt-4">Agregar Empresa</a>
+        </div>
+    </div>
+</div>

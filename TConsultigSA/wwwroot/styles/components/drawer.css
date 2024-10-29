@@ -1,0 +1,45 @@
+﻿// Variables necesarias (asegúrate de que las variables globales están importadas)
+$drawer-bg-color: #f8f9fa;
+$drawer-width: 250px;
+$drawer-width-toggled: 60px;
+/* Estilo para el contenedor principal */
+#wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Estilo para el Drawer Navigator */
+#drawer {
+    min-height: 100vh;
+    width: $drawer-width;
+    transition: all 0.3s;
+    background-color: $drawer-bg-color;
+}
+
+    #drawer.toggled {
+        width: $drawer-width-toggled;
+    }
+
+    #drawer .list-group-item {
+        font-size: 1.1em;
+        padding: 1em;
+    }
+
+    #drawer.toggled .list-group-item {
+        display: none;
+    }
+
+#page-content-wrapper {
+    flex: 1;
+    transition: all 0.3s;
+    padding: 20px;
+}
+
+    #page-content-wrapper.toggled {
+        margin-left: $drawer-width-toggled;
+    }
+
+/* Estilo para el botón de alternar el drawer */
+#menu-toggle {
+    font-size: 1.5em;
+}

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<TConsultigSA.Models.PrestamoViewModel>
+
+
+            <h2 class="text-md-center mt-5">Registro de Préstamos</h2>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Empleado</th>
+                                <th>Total</th>
+                                <th>Cuotas Pendientes</th>
+                                <th>Fecha de Préstamo</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var prestamo in Model)
+                            {
+                                <tr>
+                                    <td>@prestamo.EmpleadoNombre</td>
+                                    <td>@prestamo.Total</td>
+                                    <td>@prestamo.CuotasPendientes</td>
+                                    <td>@prestamo.FechaPrestamo.ToString("dd/MM/yyyy")</td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@prestamo.Id" class="btn btn-warning">Editar</a>
+                                        <form asp-action="Delete" asp-route-id="@prestamo.Id" method="post" style="display:inline;" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este préstamo?');">
+                                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-12 text-left">
+                            <a asp-action="Create" class="btn btn-success mt-3">Nuevo Préstamo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+

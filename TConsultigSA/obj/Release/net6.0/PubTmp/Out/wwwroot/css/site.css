@@ -1,0 +1,30 @@
+/* Estilos básicos */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* Importar aquí el CSS compilado de `styles` */
+/* Por ejemplo, estilos de drawer */
+#drawer {
+    min-height: 100vh;
+    width: 250px;
+    transition: all 0.3s;
+    background-color: #f8f9fa;
+}
+
+/* Más estilos de `styles` */

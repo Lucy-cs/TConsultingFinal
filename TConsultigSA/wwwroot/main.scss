@@ -1,0 +1,14 @@
+﻿// main.scss en /styles
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/typography';
+@import 'components/buttons';
+@import 'components/drawer';
+
+
+namespace TConsultigSA.wwwroot
+{
+    public class main
+    {
+    }
+}

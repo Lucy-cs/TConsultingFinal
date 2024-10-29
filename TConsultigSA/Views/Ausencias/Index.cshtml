@@ -1,0 +1,85 @@
+﻿@model IEnumerable<TConsultigSA.Models.AusenciaViewModel>
+
+
+        <div class="container">
+            <h2 class="text-md-center mt-5">Lista de Ausencias</h2>
+
+        <!-- Mensaje de error con botón de cierre -->
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["ErrorMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-10">
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Empleado</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Fin</th>
+                                <th>Días Totales</th>
+                                <th>Autorizado</th>
+                                <th>Deducible</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var ausencia in Model)
+                            {
+                                <tr>
+                                    <td>@ausencia.EmpleadoNombre</td>
+                                    <td>@ausencia.FechaInicio.ToString("dd/MM/yyyy")</td>
+                                    <td>@ausencia.FechaFin.ToString("dd/MM/yyyy")</td>
+                                    <td>@ausencia.TotalDias</td>
+                                    <td>
+                                        @if (ausencia.Autorizado)
+                                        {
+                                            <span class="badge badge-success">Sí</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-danger">No</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (ausencia.Deducible)
+                                        {
+                                            <span class="badge badge-warning">Sí</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-secondary">No</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@ausencia.Id" class="btn btn-warning">Editar</a>
+                                    <!-- Cambiado a asp-action="Delete" para usar el ActionName en el controlador -->
+                                        <form asp-action="Delete" asp-route-id="@ausencia.Id" method="post" style="display:inline;" onsubmit="return confirm('¿Estás seguro de eliminar esta ausencia?');">
+                                            <button type="submit" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i> Eliminar
+                                            </button>
+                                        </form>
+                                   
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <div class="row">
+                        <div class="col-12 text-left">
+                            <a asp-action="Create" class="btn btn-success mt-3">Nueva Ausencia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+

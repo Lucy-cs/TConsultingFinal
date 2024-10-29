@@ -1,0 +1,69 @@
+﻿@model IEnumerable<TConsultigSA.Models.HorasTrabajo>
+
+<div class="container">
+    <h2 class="text-center mt-5 mb-5">Horas Trabajadas al Mes</h2>
+
+    <div class="row mt-4 justify-content-center">
+        <div class="col-md-10">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nombre del Empleado</th>
+                        <th>Mes</th>
+                        <th>Horas Trabajadas</th>
+                        <th>Observaciones</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var horas in Model)
+                    {
+                        <tr>
+                            <td>@(horas.Empleado?.Nombre ?? "No asignado")</td>
+                            <td>@horas.Fecha.ToString("MM/yyyy")</td>
+                            <td>@horas.TotalHoras</td>
+                            <td>@horas.Observaciones</td>
+                            <td>
+                                <span class="badge @(horas.Aprobado ? "badge-success" : "badge-warning")">
+                                    @(horas.Aprobado ? "Aprobado" : "Pendiente")
+                                </span>
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@horas.Id" class="btn btn-warning">Editar</a>
+                                <!-- Botón para abrir el modal de detalles -->
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detallesHorasModal-@horas.Id">
+                                    Detalles
+                                </button>
+                                <a asp-action="Delete" asp-route-id="@horas.Id" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+    <a asp-action="Create" class="btn btn-success">Agregar Horas</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal de detalles -->
+@foreach (var horas in Model)
+{
+    <div class="modal fade" id="detallesHorasModal-@horas.Id" tabindex="-1" role="dialog" aria-labelledby="detallesHorasModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- Aquí se incluirá el modal -->
+                @await Html.PartialAsync("_DetallesHorasModal", new TConsultigSA.Models.DetallesHorasViewModel
+       {
+           NombreEmpleado = horas.Empleado?.Nombre ?? "No asignado",
+           Mes = horas.Fecha.ToString("MM/yyyy"),
+           HorasTrabajadas = horas.TotalHoras,
+           Observaciones = horas.Observaciones,
+           Estado = horas.Aprobado ? "Aprobado" : "Pendiente"
+       })
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TConsultigSA.Models.TipoPrestamo>
+
+<div class="container">
+    <!-- Título centrado y con estilo -->
+    <h2 class="text-md-center mt-5">Tipos de Préstamo</h2>
+
+    <!-- Mensaje de error con botón de cierre -->
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+        </div>
+    }
+
+    
+    <div class="row mt-4 justify-content-center">
+        <div class="col-md-8">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var tipo in Model)
+                    {
+                        <tr>
+                            <td>@tipo.Descripcion</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@tipo.Id" class="btn btn-warning">Editar</a>
+                                <!-- Cambiado a asp-action="Delete" para usar el ActionName en el controlador -->
+                                <form asp-action="Delete" asp-route-id="@tipo.Id" method="post" style="display:inline;" onsubmit="return confirm('¿Estás seguro de eliminar este tipo de préstamo?');">
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fas fa-trash-alt"></i> Eliminar
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <!-- Botón alineado a la izquierda -->
+            <div class="row">
+                <div class="col-12 text-left">
+                    <a asp-action="Create" class="btn btn-success mt-3">Crear Nuevo</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

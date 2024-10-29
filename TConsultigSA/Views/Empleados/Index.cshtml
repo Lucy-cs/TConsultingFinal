@@ -1,0 +1,152 @@
+﻿@model IEnumerable<TConsultigSA.Models.Empleado>
+
+<div class="container">
+    <h2 class="text-center mt-5 mb-3">Lista de Empleados</h2>
+
+    <!-- Mensaje de error con botón de cierre -->
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+        </div>
+    }
+
+
+    <!-- Formulario de búsqueda -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <form method="get" asp-action="Index">
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="text" name="searchDPI" class="form-control" placeholder="Buscar por DPI" value="@ViewBag.SearchDPI" />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="searchNombre" class="form-control" placeholder="Buscar por Nombre" value="@ViewBag.SearchNombre" />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" name="searchFecha" class="form-control" placeholder="Buscar por Fecha de Contratación" value="@ViewBag.SearchFecha" />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" step="0.01" name="searchSalario" class="form-control" placeholder="Buscar por Salario" value="@ViewBag.SearchSalario" />
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                        <a href="@Url.Action("Index")" class="btn btn-secondary">Limpiar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Tabla de empleados -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>DPI</th>
+                        <th>Nombre</th>
+                        <th>Fecha Contratado</th>
+                        <th>Salario</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var empleado in Model)
+                    {
+                        <tr>
+                            <td>@empleado.DPI</td>
+                            <td>@empleado.Nombre</td>
+                            <td>@empleado.FechaContratado.ToString("dd/MM/yyyy")</td>
+                            <td>@empleado.Salario</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@empleado.Id" class="btn btn-warning">Editar</a>
+                                <!-- Cambiado a asp-action="Delete" para usar el ActionName en el controlador -->
+                                <form asp-action="Delete" asp-route-id="@empleado.Id" method="post" style="display:inline;" onsubmit="return confirm('¿Estás seguro de eliminar al empleado?');">
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fas fa-trash-alt"></i> Eliminar
+                                    </button>
+                                </form>
+                                <button class="btn btn-info" data-toggle="modal" data-target="#empleadoModal" onclick="cargarEmpleadoDetalles(@empleado.Id)">Ver Información</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Paginación -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                            <a class="page-link" asp-action="Index" asp-route-pageNumber="@i" asp-route-searchDPI="@ViewBag.SearchDPI" asp-route-searchNombre="@ViewBag.SearchNombre" asp-route-searchFecha="@ViewBag.SearchFecha" asp-route-searchSalario="@ViewBag.SearchSalario">@i</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-left">
+            <a asp-action="Create" class="btn btn-success mt-3">Nuevo Empleado</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para mostrar información del empleado -->
+<div class="modal fade" id="empleadoModal" tabindex="-1" role="dialog" aria-labelledby="empleadoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Aquí se cargará el contenido de la vista parcial con AJAX -->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+        let originalPaddingRight;
+
+        function cargarEmpleadoDetalles(id) {
+            $.ajax({
+                url: '@Url.Action("GetEmpleadoDetails", "Empleados")',
+                type: 'GET',
+                data: { id: id },
+                success: function (result) {
+                    $('#empleadoModal .modal-content').html(result);
+                    $('#empleadoModal').modal('show');
+                }
+            });
+        }
+
+        $('#empleadoModal').on('show.bs.modal', function () {
+            // Guardar el padding original del body y ajustar si es necesario
+            originalPaddingRight = $('body').css('padding-right');
+        });
+
+        $('#empleadoModal').on('hidden.bs.modal', function () {
+            // Limpiar contenido del modal
+            $(this).find('.modal-content').html('');
+
+            // Restaurar el padding original del body y eliminar backdrop
+            $('body').css('padding-right', originalPaddingRight);
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+        });
+    </script>
+}

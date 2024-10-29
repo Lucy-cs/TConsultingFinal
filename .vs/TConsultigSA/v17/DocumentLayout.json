@@ -1,0 +1,218 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\repositorio\\asp.net\\TConsultingF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|c:\\repositorio\\asp.net\\tconsultingf\\tconsultigsa\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|solutionrelative:tconsultigsa\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|c:\\repositorio\\asp.net\\tconsultingf\\tconsultigsa\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|solutionrelative:tconsultigsa\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|c:\\repositorio\\asp.net\\tconsultingf\\tconsultigsa\\controllers\\departamentoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|solutionrelative:tconsultigsa\\controllers\\departamentoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|c:\\repositorio\\asp.net\\tconsultingf\\tconsultigsa\\views\\departamentos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|solutionrelative:tconsultigsa\\views\\departamentos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|c:\\repositorio\\asp.net\\tconsultingf\\tconsultigsa\\controllers\\horastrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|solutionrelative:tconsultigsa\\controllers\\horastrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|c:\\repositorio\\asp.net\\tconsultingf\\tconsultigsa\\views\\horastrabajo\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|solutionrelative:tconsultigsa\\views\\horastrabajo\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|c:\\repositorio\\asp.net\\tconsultingf\\tconsultigsa\\models\\horastrabajoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|solutionrelative:tconsultigsa\\models\\horastrabajoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|c:\\repositorio\\asp.net\\tconsultingf\\tconsultigsa\\models\\horastrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|solutionrelative:tconsultigsa\\models\\horastrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|c:\\repositorio\\asp.net\\tconsultingf\\tconsultigsa\\repositories\\ihorastrabajorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|solutionrelative:tconsultigsa\\repositories\\ihorastrabajorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|c:\\repositorio\\asp.net\\tconsultingf\\tconsultigsa\\repositories\\horastrabajorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB189C0-7332-432D-BD07-87D69BF9FB18}|TConsultigSA\\TConsultigSA.csproj|solutionrelative:tconsultigsa\\repositories\\horastrabajorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Views\\Departamentos\\Index.cshtml",
+              "RelativeDocumentMoniker": "TConsultigSA\\Views\\Departamentos\\Index.cshtml",
+              "ToolTip": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Views\\Departamentos\\Index.cshtml",
+              "RelativeToolTip": "TConsultigSA\\Views\\Departamentos\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T20:24:16.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepartamentosController.cs",
+              "DocumentMoniker": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Controllers\\DepartamentosController.cs",
+              "RelativeDocumentMoniker": "TConsultigSA\\Controllers\\DepartamentosController.cs",
+              "ToolTip": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Controllers\\DepartamentosController.cs",
+              "RelativeToolTip": "TConsultigSA\\Controllers\\DepartamentosController.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAswJoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:24:12.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "TConsultigSA\\Controllers\\EmpleadosController.cs",
+              "ToolTip": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "TConsultigSA\\Controllers\\EmpleadosController.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAowJgAAABtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:24:06.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Views\\Empleados\\Index.cshtml",
+              "RelativeDocumentMoniker": "TConsultigSA\\Views\\Empleados\\Index.cshtml",
+              "ToolTip": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Views\\Empleados\\Index.cshtml",
+              "RelativeToolTip": "TConsultigSA\\Views\\Empleados\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T20:24:01.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HorasTrabajoViewModel.cs",
+              "DocumentMoniker": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Models\\HorasTrabajoViewModel.cs",
+              "RelativeDocumentMoniker": "TConsultigSA\\Models\\HorasTrabajoViewModel.cs",
+              "ToolTip": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Models\\HorasTrabajoViewModel.cs",
+              "RelativeToolTip": "TConsultigSA\\Models\\HorasTrabajoViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:17:01.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Views\\HorasTrabajo\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TConsultigSA\\Views\\HorasTrabajo\\Edit.cshtml",
+              "ToolTip": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Views\\HorasTrabajo\\Edit.cshtml",
+              "RelativeToolTip": "TConsultigSA\\Views\\HorasTrabajo\\Edit.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T20:13:28.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HorasTrabajoRepositorio.cs",
+              "DocumentMoniker": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Repositories\\HorasTrabajoRepositorio.cs",
+              "RelativeDocumentMoniker": "TConsultigSA\\Repositories\\HorasTrabajoRepositorio.cs",
+              "ToolTip": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Repositories\\HorasTrabajoRepositorio.cs",
+              "RelativeToolTip": "TConsultigSA\\Repositories\\HorasTrabajoRepositorio.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAiwGcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:12:38.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HorasTrabajoController.cs",
+              "DocumentMoniker": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Controllers\\HorasTrabajoController.cs",
+              "RelativeDocumentMoniker": "TConsultigSA\\Controllers\\HorasTrabajoController.cs",
+              "ToolTip": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Controllers\\HorasTrabajoController.cs",
+              "RelativeToolTip": "TConsultigSA\\Controllers\\HorasTrabajoController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAA9wFIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:05:44.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IHorasTrabajoRepositorio.cs",
+              "DocumentMoniker": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Repositories\\IHorasTrabajoRepositorio.cs",
+              "RelativeDocumentMoniker": "TConsultigSA\\Repositories\\IHorasTrabajoRepositorio.cs",
+              "ToolTip": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Repositories\\IHorasTrabajoRepositorio.cs",
+              "RelativeToolTip": "TConsultigSA\\Repositories\\IHorasTrabajoRepositorio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:12:40.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HorasTrabajo.cs",
+              "DocumentMoniker": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Models\\HorasTrabajo.cs",
+              "RelativeDocumentMoniker": "TConsultigSA\\Models\\HorasTrabajo.cs",
+              "ToolTip": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\Models\\HorasTrabajo.cs",
+              "RelativeToolTip": "TConsultigSA\\Models\\HorasTrabajo.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAowBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:16:41.212Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

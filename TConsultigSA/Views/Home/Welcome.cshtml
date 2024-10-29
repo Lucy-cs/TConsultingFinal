@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Bienvenido a TConsultigSA";
+}
+
+<div class="container-fluid" style="height: 100vh;">
+    <div class="row h-100">
+        <!-- Columna para la imagen (50% de la pantalla) -->
+        <div class="col-md-6 p-0">
+            <div class="h-100" style="background-image: url('@Url.Content("~/images/edificioA.jpg")'); background-size: cover; background-position: center;"></div>
+        </div>
+
+        <!-- Columna para el contenido (50% de la pantalla) con fondo azul marino -->
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center" style="background-color: #001f3f;">
+            <h1 class="display-4 text-white">¡Bienvenido a TConsultigSA!</h1>
+            <hr class="my-2 bg-white">
+            <p class="lead text-white">Administra a tu personal y su nómina de manera ágil y confiable.</p>
+            <hr class="my-2 bg-white">
+            <p class="text-white">¿Primera vez? Regístrate para empezar a utilizar nuestra plataforma o inicia sesión si ya estás registrado.</p>
+            <div class="d-flex justify-content-center">
+                <a href="/Auth/Login" class="btn btn-primary btn-lg mx-2">Iniciar Sesión</a>
+                <a href="/Auth/Registro" class="btn btn-success btn-lg mx-2">Registrarse</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-white mt-4" style="background-color: #001f3f;">
+    <div class="text-white py-3">
+        <p>Ante cualquier inconveniente, no dudes en contactarnos al <strong>+502 6754 6543</strong> o escríbenos a <strong>tconsultingsupport@hotmail.com</strong></p>
+    </div>
+</footer>

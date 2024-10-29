@@ -1,0 +1,36 @@
+﻿@model TConsultigSA.Models.Departamento
+
+
+        <div class="container">
+            <h2 class="text-md-center mt-5">Crear Nuevo Departamento</h2>
+
+            <form asp-action="Create" method="post" class="mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label asp-for="DepartamentoNombre" class="control-label">Nombre del Departamento</label>
+                            <input asp-for="DepartamentoNombre" class="form-control" />
+                            <span asp-validation-for="DepartamentoNombre" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="IdLider" class="control-label">Líder del Departamento (Opcional)</label>
+                            <select asp-for="IdLider" class="form-control" asp-items="ViewBag.Empleados"></select>
+                            <span asp-validation-for="IdLider" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="IdEmpresa" class="control-label">Empresa</label>
+                            <select asp-for="IdEmpresa" class="form-control" asp-items="ViewBag.Empresas"></select>
+                            <span asp-validation-for="IdEmpresa" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-left mt-4">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                        </div>
+                    </div>
+                </div>               
+            </form>
+        </div>
+
