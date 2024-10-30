@@ -29,6 +29,17 @@ namespace TConsultigSA.Repositories
             }
         }
 
+        public async Task<IEnumerable<Prestamo>> ObtenerPrestamosActivosPorEmpleado(int idEmpleado)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                var query = @"SELECT * FROM Prestamos 
+                      WHERE IdEmpleado = @IdEmpleado AND CuotasPendientes > 0";
+                return await connection.QueryAsync<Prestamo>(query, new { IdEmpleado = idEmpleado });
+            }
+        }
+
+
         // Obtener un préstamo por ID
         public async Task<Prestamo> GetById(int id)
         {

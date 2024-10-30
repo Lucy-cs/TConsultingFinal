@@ -6,6 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using TConsultigSA.Repositories;
 using TConsultingSA.Repositories;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
+using TConsultigSA.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +28,11 @@ builder.Services.AddScoped<PuestoRepositorio>();
 builder.Services.AddScoped<AusenciaRepositorio>();
 builder.Services.AddScoped<PrestamoRepositorio>(); // Registro para el servicio de préstamos
 builder.Services.AddScoped<TipoPrestamoRepositorio>();    // Repositorio de tipos de préstamo
+builder.Services.AddScoped<TipoNominaRepositorio>();
+builder.Services.AddScoped<NominaService>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+builder.Services.AddSingleton<ICompositeViewEngine, CompositeViewEngine>();
 
 
 builder.Services.AddScoped<AusenciaRepositorio>();
@@ -35,7 +43,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = "/Auth/Login";
         options.LogoutPath = "/Auth/Logout";
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
         options.SlidingExpiration = true;
     });
 

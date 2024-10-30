@@ -57,6 +57,10 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.2.1, )"
+            },
+            "Select.HtmlToPdf.NetCore": {
+              "target": "Package",
+              "version": "[24.1.0, )"
             }
           },
           "imports": [

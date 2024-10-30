@@ -29,6 +29,18 @@ namespace TConsultigSA.Repositories
             }
         }
 
+        public async Task<IEnumerable<Ausencia>> ObtenerAusenciasPorEmpleadoYMes(int idEmpleado, int mes, int año)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                var query = @"SELECT * FROM Ausencias 
+                      WHERE IdEmpleado = @IdEmpleado AND 
+                            (MONTH(FechaInicio) = @Mes OR MONTH(FechaFin) = @Mes) AND 
+                            (YEAR(FechaInicio) = @Año OR YEAR(FechaFin) = @Año)";
+                return await connection.QueryAsync<Ausencia>(query, new { IdEmpleado = idEmpleado, Mes = mes, Año = año });
+            }
+        }
+
         // Obtener una ausencia por ID
         public async Task<Ausencia> GetById(int id)
         {

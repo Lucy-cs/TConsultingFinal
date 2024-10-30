@@ -10,10 +10,10 @@
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+    <PackageReference Include="Select.HtmlToPdf.NetCore" Version="24.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Servicios\" />
     <Folder Include="wwwroot\styles\layouts\" />
     <Folder Include="wwwroot\styles\base\" />
     <Folder Include="wwwroot\styles\pages\" />

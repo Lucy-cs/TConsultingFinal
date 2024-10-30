@@ -13,14 +13,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\wwwroot\\images\\default-profile.jpeg",
-      "PackagePath": "staticwebassets\\images\\default-profile.jpeg"
-    },
-    {
-      "Id": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\wwwroot\\images\\edificio.jpg",
-      "PackagePath": "staticwebassets\\images\\edificio.jpg"
-    },
-    {
       "Id": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\wwwroot\\images\\edificioA.jpg",
       "PackagePath": "staticwebassets\\images\\edificioA.jpg"
     },
@@ -43,6 +35,10 @@
     {
       "Id": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\wwwroot\\images\\logoTC.png",
       "PackagePath": "staticwebassets\\images\\logoTC.png"
+    },
+    {
+      "Id": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\wwwroot\\images\\reflexion.png",
+      "PackagePath": "staticwebassets\\images\\reflexion.png"
     },
     {
       "Id": "C:\\repositorio\\asp.net\\TConsultingF\\TConsultigSA\\wwwroot\\js\\site.js",

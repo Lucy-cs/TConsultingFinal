@@ -10,6 +10,8 @@ namespace TConsultingSA.Repositories
         Task<int> Delete(int id);
         Task<int> Update(HorasTrabajo horasTrabajo);
         // Puedes agregar más métodos según sea necesario, como Update, Delete, etc.
+        Task<IEnumerable<HorasTrabajo>> ObtenerHorasPorEmpleadoYMes(int idEmpleado, int mes, int año);
+        // Puedes agregar más métodos según sea necesario, como Update, Delete, etc.
 
     }
 }

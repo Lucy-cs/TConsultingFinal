@@ -8,6 +8,27 @@
     <h2 class="mt-5">Inicio</h2>
     <p>Bienvenido a la página principal del sistema.</p>
 
+    <!-- Imagen -->
+    <div class="my-4">
+        <img src="~/images/reflexion.png" alt="Reflexión" class="img-fluid rounded shadow" style="max-width: 100%; height: auto; max-height: 500px;">
+    </div>
+
+    <!-- Cita -->
+    <blockquote class="blockquote text-center mt-3">
+        <p class="mb-0">"La excelencia no es un acto, sino un hábito. Somos lo que hacemos repetidamente."</p>
+        <footer class="blockquote-footer mt-2"> Aristóteles</footer>
+    </blockquote>
+
+    <!-- Botones de acceso rápido -->
+    <div class="mt-5">
+        <a href="@Url.Action("Index", "Empleados")" class="btn btn-primary btn-lg mx-2">
+            <i class="bi bi-people"></i> Ver Empleados
+        </a>
+        <a href="@Url.Action("CalcularNomina", "Nomina")" class="btn btn-success btn-lg mx-2">
+            <i class="bi bi-cash-stack"></i> Calcular Nóminas
+        </a>
+    </div>
+
 </div>
 
 

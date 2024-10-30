@@ -1,0 +1,100 @@
+﻿@model NominaResultado
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Recibo de Nómina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #001f3f;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        th, td {
+            border: 1px solid #D6DBDF;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #001f3f;
+            color: white;
+        }
+
+        .total {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .right-align {
+            text-align: right;
+        }
+
+        .center-align {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            font-weight: bold;
+
+    </style>
+</head>
+<body>
+    <h1>Recibo de Nómina</h1>
+    <h2>@Model.NombreEmpleado</h2>
+    <p><strong>Mes/Año:</strong> @Model.Mes/@Model.Año</p>
+
+    <table>
+        <tr>
+            <th>Concepto</th>
+            <th class="right-align">Monto (Q)</th>
+        </tr>
+        <tr>
+            <td>Salario Base</td>
+            <td class="right-align">@Model.SalarioBase.ToString("N2")</td>
+        </tr>
+        <tr>
+            <td>Horas Extras (@Model.HorasExtras.ToString("N2") horas)</td>
+            <td class="right-align">@((@Model.HorasExtras * (@Model.SalarioBase / 160) * 1.5m).ToString("N2"))</td>
+        </tr>
+        <tr>
+            <td>Bonificación</td>
+            <td class="right-align">@Model.Bonificacion.ToString("N2")</td>
+        </tr>
+        <tr>
+            <th>Subtotal Ingresos</th>
+            <th class="right-align">@Model.SalarioBruto.ToString("N2")</th>
+        </tr>
+        <tr>
+            <td>Descuento por Ausencias</td>
+            <td class="right-align">-@Model.DescuentoAusencias.ToString("N2")</td>
+        </tr>
+        <tr>
+            <td>Deducciones por Préstamos</td>
+            <td class="right-align">-@Model.DeduccionesPrestamos.ToString("N2")</td>
+        </tr>
+        <tr>
+            <th>Total Deducciones</th>
+            <th class="right-align">-@(@Model.DescuentoAusencias + @Model.DeduccionesPrestamos).ToString("N2")</th>
+        </tr>
+        <tr>
+            <th class="total">Salario Total a Recibir</th>
+            <th class="right-align total">@Model.SalarioNeto.ToString("N2")</th>
+        </tr>
+    </table>
+
+    <!-- Centramos los párrafos de firma y fecha con la clase center-align -->
+    <p style="margin-top: 100px;" class="center-align">Firma del Empleado: ____________________________</p>
+    <p class="center-align">Fecha de Emisión: @DateTime.Now.ToString("dd/MM/yyyy")</p>
+</body>
+</html>

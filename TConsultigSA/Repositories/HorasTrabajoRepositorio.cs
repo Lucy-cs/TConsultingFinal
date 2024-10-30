@@ -16,6 +16,16 @@ namespace TConsultigSA.Repositories
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
 
+        public async Task<IEnumerable<HorasTrabajo>> ObtenerHorasPorEmpleadoYMes(int idEmpleado, int mes, int año)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                var query = @"SELECT * FROM HorasTrabajo 
+                      WHERE IdEmpleado = @IdEmpleado AND MONTH(Fecha) = @Mes AND YEAR(Fecha) = @Año";
+                return await connection.QueryAsync<HorasTrabajo>(query, new { IdEmpleado = idEmpleado, Mes = mes, Año = año });
+            }
+        }
+
         public async Task<IEnumerable<HorasTrabajo>> GetAll()
         {
             using (var connection = new SqlConnection(_connectionString))
