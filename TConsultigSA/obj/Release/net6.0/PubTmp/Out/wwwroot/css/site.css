@@ -28,3 +28,24 @@ body {
 }
 
 /* Más estilos de `styles` */
+
+.offcanvas {
+    transition: transform 0.4s ease-in-out;
+}
+
+.offcanvas-body .list-group-item {
+    transition: background-color 0.3s ease;
+}
+
+    .offcanvas-body .list-group-item:hover {
+        background-color: #f8f9fa;
+    }
+
+    .offcanvas-body .list-group-item i {
+        margin-right: 10px;
+    }
+
+
+
+/* Más estilos de para el inicio */
+

@@ -6,6 +6,7 @@ using TConsultigSA.Models;
 using TConsultigSA.Repositories;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Data.SqlClient;
+using TConsultigSA.Services;
 
 namespace TConsultigSA.Controllers
 {
@@ -14,12 +15,15 @@ namespace TConsultigSA.Controllers
         private readonly EmpleadoRepositorio _empleadoRepositorio;
         private readonly PuestoRepositorio _puestoRepositorio;  // Repositorio de puestos
         private readonly DepartamentoRepositorio _departamentoRepositorio;  // Repositorio de departamentos
+        private readonly NominaService _nominaService;
 
-        public EmpleadosController(EmpleadoRepositorio empleadoRepositorio, PuestoRepositorio puestoRepositorio, DepartamentoRepositorio departamentoRepositorio)
+        public EmpleadosController(EmpleadoRepositorio empleadoRepositorio, PuestoRepositorio puestoRepositorio, DepartamentoRepositorio departamentoRepositorio, NominaService nominaService)
         {
             _empleadoRepositorio = empleadoRepositorio;
             _puestoRepositorio = puestoRepositorio;
             _departamentoRepositorio = departamentoRepositorio;
+            _nominaService = nominaService;
+
         }
 
         // Método Index con filtros
@@ -175,5 +179,52 @@ namespace TConsultigSA.Controllers
                 Text = d.DepartamentoNombre
             }).ToList();
         }
+
+        public async Task<IActionResult> HistorialAumentos(int idEmpleado)
+        {
+            var historialAumentos = await _nominaService.ObtenerHistorialAumentos(idEmpleado);
+            ViewBag.NombreEmpleado = (await _nominaService.ObtenerEmpleadoPorId(idEmpleado))?.Nombre;
+            return View(historialAumentos);
+        }
+
+
+        // Acción para mostrar la vista del formulario de aumento salarial
+        public async Task<IActionResult> AgregarAumento(int idEmpleado)
+        {
+            var empleado = await _empleadoRepositorio.GetById(idEmpleado);
+            if (empleado == null)
+            {
+                return NotFound();
+            }
+
+            ViewBag.NombreEmpleado = empleado.Nombre;
+            ViewBag.EmpleadoId = empleado.Id;
+            return View();
+        }
+
+        // Acción para registrar el aumento salarial
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RegistrarAumento(int idEmpleado, decimal cantidadAumento)
+        {
+            if (cantidadAumento <= 0)
+            {
+                TempData["ErrorMessage"] = "El aumento salarial debe ser mayor que cero.";
+                return RedirectToAction("AgregarAumento", new { idEmpleado });
+            }
+
+            try
+            {
+                await _nominaService.RegistrarAumento(idEmpleado, cantidadAumento);
+                TempData["SuccessMessage"] = "Aumento salarial registrado exitosamente.";
+                return RedirectToAction("HistorialAumentos", new { idEmpleado });
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Ocurrió un error al registrar el aumento: {ex.Message}";
+                return RedirectToAction("AgregarAumento", new { idEmpleado });
+            }
+        }
+
     }
 }

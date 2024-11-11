@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TConsultigSA.Models.AumentoSalarial>
+@{
+    ViewBag.Title = "Historial de Aumentos Salariales";
+}
+
+<div class="container">
+    <h2 class="text-center mt-5 mb-4">Historial de Aumentos Salariales para @ViewBag.NombreEmpleado</h2>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Fecha</th>
+                <th>Cantidad del Aumento</th>
+                <th>Salario Final</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var aumento in Model)
+            {
+                <tr>
+                    <td>@aumento.FechaAumento.ToString("dd/MM/yyyy")</td>
+                    <td>Q @aumento.CantidadAumento.ToString("N2")</td>
+                    <td>Q @aumento.SalarioFinal.ToString("N2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="text-left mt-4">
+        <a asp-action="Index" class="btn btn-secondary">Regresar</a>
+    </div>
+</div>

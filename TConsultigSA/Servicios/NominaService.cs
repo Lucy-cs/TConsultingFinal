@@ -10,17 +10,20 @@ namespace TConsultigSA.Services
         private readonly IHorasTrabajoRepositorio _horasTrabajoRepositorio;
         private readonly AusenciaRepositorio _ausenciaRepositorio;
         private readonly PrestamoRepositorio _prestamoRepositorio;
+        private readonly AumentoSalarialRepositorio _aumentoSalarialRepositorio;
 
         public NominaService(
             EmpleadoRepositorio empleadoRepositorio,
             IHorasTrabajoRepositorio horasTrabajoRepositorio,
             AusenciaRepositorio ausenciaRepositorio,
-            PrestamoRepositorio prestamoRepositorio)
+            PrestamoRepositorio prestamoRepositorio,
+            AumentoSalarialRepositorio aumentoSalarialRepositorio)
         {
             _empleadoRepositorio = empleadoRepositorio;
             _horasTrabajoRepositorio = horasTrabajoRepositorio;
             _ausenciaRepositorio = ausenciaRepositorio;
             _prestamoRepositorio = prestamoRepositorio;
+            _aumentoSalarialRepositorio = aumentoSalarialRepositorio;
         }
 
         public async Task<NominaResultado> CalcularNominaParaEmpleado(int idEmpleado, int mes, int año)
@@ -94,6 +97,37 @@ namespace TConsultigSA.Services
             }
 
             return horasExtrasTotales;
+        }
+
+        public async Task RegistrarAumento(int empleadoId, decimal cantidadAumento)
+        {
+            var empleado = await _empleadoRepositorio.GetById(empleadoId);
+            if (empleado == null)
+            {
+                throw new Exception("Empleado no encontrado.");
+            }
+
+            empleado.Salario += cantidadAumento;  // Actualizar salario del empleado
+            await _empleadoRepositorio.Update(empleado);  // Guardar cambios en el salario
+
+            var aumento = new AumentoSalarial
+            {
+                EmpleadoId = empleadoId,
+                FechaAumento = DateTime.Now,
+                CantidadAumento = cantidadAumento,
+                SalarioFinal = empleado.Salario
+            };
+
+            await _aumentoSalarialRepositorio.AgregarAumento(aumento); // Guardar aumento en el historial
+        }
+
+        public async Task<IEnumerable<AumentoSalarial>> ObtenerHistorialAumentos(int empleadoId)
+        {
+            return await _aumentoSalarialRepositorio.ObtenerAumentosPorEmpleado(empleadoId);
+        }
+        public async Task<Empleado> ObtenerEmpleadoPorId(int idEmpleado)
+        {
+            return await _empleadoRepositorio.GetById(idEmpleado);
         }
     }
 }

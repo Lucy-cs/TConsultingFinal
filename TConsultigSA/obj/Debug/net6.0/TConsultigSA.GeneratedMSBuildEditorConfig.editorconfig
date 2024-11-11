@@ -50,12 +50,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Empleados/AgregarAumento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEFncmVnYXJBdW1lbnRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Empleados/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Empleados/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Empleados/HistorialAumentos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEhpc3RvcmlhbEF1bWVudG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Empleados/Index.cshtml]

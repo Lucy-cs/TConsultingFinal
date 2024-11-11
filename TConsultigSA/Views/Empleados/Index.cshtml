@@ -75,6 +75,8 @@
                                     </button>
                                 </form>
                                 <button class="btn btn-info" data-toggle="modal" data-target="#empleadoModal" onclick="cargarEmpleadoDetalles(@empleado.Id)">Ver Información</button>
+                                <a asp-action="HistorialAumentos" asp-route-idEmpleado="@empleado.Id" class="btn btn-secondary">Ver Historial de Aumentos</a>
+                                <a asp-action="AgregarAumento" asp-route-idEmpleado="@empleado.Id" class="btn btn-success">Aumentar Salario</a>
                             </td>
                         </tr>
                     }
@@ -101,7 +103,7 @@
 
     <div class="row">
         <div class="col-12 text-left">
-            <a asp-action="Create" class="btn btn-success mt-3">Nuevo Empleado</a>
+            <a asp-action="Create" class="btn btn-success mt-3">Nuevo Empleado</a>           
         </div>
     </div>
 </div>

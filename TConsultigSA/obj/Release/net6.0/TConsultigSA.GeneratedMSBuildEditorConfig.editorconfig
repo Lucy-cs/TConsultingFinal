@@ -18,12 +18,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\repositorio\asp.net\TConsultingF\TConsultigSA
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Ausencias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVzZW5jaWFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Ausencias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVzZW5jaWFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Ausencias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVzZW5jaWFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Auth/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Ryby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Departamentos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Departamentos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Departamentos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Empleados/Create.cshtml]
@@ -42,16 +66,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXF9FbXBsZWFkb0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Empleados/_EmpleadosTablaCompleta.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXF9FbXBsZWFkb3NUYWJsYUNvbXBsZXRhLmNzaHRtbA==
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Empresas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Empresas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Empresas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Home/Welcome.cshtml]
@@ -62,8 +90,56 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXNUcmFiYWpvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/HorasTrabajo/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXNUcmFiYWpvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/HorasTrabajo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXNUcmFiYWpvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/HorasTrabajo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXNUcmFiYWpvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/HorasTrabajo/_DetallesHorasModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXNUcmFiYWpvXF9EZXRhbGxlc0hvcmFzTW9kYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Nomina/CalcularNomina.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXENhbGN1bGFyTm9taW5hLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Nomina/ReciboNominaPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXFJlY2lib05vbWluYVBERi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Nomina/ResultadoNomina.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXFJlc3VsdGFkb05vbWluYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Prestamos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Prestamos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Prestamos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Puestos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Puestos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Puestos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Roles/Create.cshtml]
@@ -82,12 +158,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Shared/_Sidebar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlYmFyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/TiposNomina/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NOb21pbmFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/TiposNomina/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NOb21pbmFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/TiposNomina/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NOb21pbmFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/TiposNomina/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NOb21pbmFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/TiposPrestamo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NQcmVzdGFtb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/TiposPrestamo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NQcmVzdGFtb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/TiposPrestamo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NQcmVzdGFtb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/repositorio/asp.net/TConsultingF/TConsultigSA/Views/_ViewImports.cshtml]

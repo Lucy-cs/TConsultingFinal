@@ -30,6 +30,8 @@ builder.Services.AddScoped<PrestamoRepositorio>(); // Registro para el servicio 
 builder.Services.AddScoped<TipoPrestamoRepositorio>();    // Repositorio de tipos de préstamo
 builder.Services.AddScoped<TipoNominaRepositorio>();
 builder.Services.AddScoped<NominaService>();
+builder.Services.AddScoped<AumentoSalarialRepositorio>();
+
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 builder.Services.AddSingleton<ICompositeViewEngine, CompositeViewEngine>();

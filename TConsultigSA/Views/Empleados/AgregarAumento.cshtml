@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Agregar Aumento Salarial";
+}
+
+<div class="container">
+    <h2 class="text-center mt-5 mb-3">Agregar Aumento Salarial</h2>
+
+    <p class="text-center">Empleado: <strong>@ViewBag.NombreEmpleado</strong></p>
+
+    <!-- Mensaje de error o éxito -->
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    else if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <!-- Formulario para el aumento salarial -->
+    <form asp-action="RegistrarAumento" method="post">
+        <input type="hidden" name="idEmpleado" value="@ViewBag.EmpleadoId" />
+
+        <div class="form-group">
+            <label for="cantidadAumento">Cantidad de Aumento</label>
+            <input type="number" step="0.01" class="form-control" id="cantidadAumento" name="cantidadAumento" placeholder="Ingrese el monto del aumento" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Registrar Aumento</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
